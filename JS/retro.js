@@ -1,1 +1,0 @@
-alert('Retro is Ready!');

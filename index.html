@@ -1,16 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-6: Retro Forum</title>
+    <!-- Daisy UI & Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Style with Manually file -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Hello github!</h1>
+    <header class="w-[80%] mx-auto">
+        <nav>
+            <div class="flex justify-between bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a><img src="" alt=""></a></li>
+                            <li><a><img src="" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl">ReTro</a>
+                </div>
+                <div class="flex">
+                    <div class="hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a>Item 1</a></li>
+                            <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <a class="btn">Sign In</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="bg-black bg-opacity-70 bg-[url('/images/bgbanner.png')] bg-cover text-white rounded-3xl">
+                
+                <h1 class="text-6xl font-bold">Welcome to the <span class="bg-gradient-to-r from-[#797DFC] to-[#000000BF] text-transparent bg-clip-text">ReTro</span> Forum</h1>
+                <p class="text-lg font-medium">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                <div class="flex border-2 rounded-full w-fit">
+                    <form>
+                        <input type="text" name="" placeholder="Search here anything" id="" class="rounded-l-full h-12 pl-6 px-8">
+                    </form>
+                    <button class="btn w-24 rounded-full bg-[#9DCFEA] text-white text-base font-medium">Search</button>
+                </div>
+            </div>
+        </nav>
     </header>
     <!-- Main Section -->
-    <main>
+    <main class="w-[80%] mx-auto">
 
     </main>
 
@@ -18,7 +69,8 @@
     <footer>
 
     </footer>
-    
+
     <script src="JS/retro.js"></script>
 </body>
+
 </html>

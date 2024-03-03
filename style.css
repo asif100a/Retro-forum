@@ -8,4 +8,17 @@
 .inter {
     font-family: "Inter", sans-serif;
 }
-  
+
+
+.navberIcons > ul > li:hover {
+  cursor: pointer;
+  position: relative;
+  background-color: rgb(245, 100, 48);
+  border-radius: 100%;
+}
+.tooltip{
+  /* visibility: ; */
+  position: absolute;
+  top: 10px;
+  /* display: flex; */
+}  

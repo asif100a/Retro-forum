@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header class="w-[80%] mx-auto">
+<body class="mulish">
+    <header class="w-[80%] mx-auto mt-10">
         <nav>
             <div class="flex justify-between bg-base-100">
                 <div class="navbar-start">
@@ -31,38 +31,115 @@
                             <li><a><img src="" alt=""></a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl">ReTro</a>
+                    <a class="btn btn-ghost text-3xl font-bold">ReTro</a>
                 </div>
-                <div class="flex">
-                    <div class="hidden lg:flex">
-                        <ul class="menu menu-horizontal px-1">
-                            <li><a>Item 1</a></li>
-                            <li><a>Item 3</a></li>
+                <div class="flex space-x-6">
+                    <div class="hidden lg:flex navberIcons">
+                        <ul id="tooltip" class="hidden lg:flex menu-horizontal px-1 space-x-4">
+                            <li><a><img src="images/Home icon.svg" alt=""></a></li>
+                            <!-- <li id="home">Home</li> -->
+                            <li><a><img src="images/Pencil icon.svg" alt=""></a></li>
+                            <!-- <li id="edit">Edit</li> -->
+                            <li><a><img src="images/Contact icon.svg" alt=""></a></li>
+                            <!-- <li id="add">Add</li> -->
+                            <li><a><img src="images/Flag icon.svg" alt=""></a></li>
+                            <!-- <li id="flag">Home</li> -->
                         </ul>
                     </div>
                     <div class="">
-                        <a class="btn">Sign In</a>
+                        <a class="btn bg-[#797DFC] text-white text-lg rounded-full px-6">Sign In</a>
                     </div>
                 </div>
             </div>
 
             <!--  -->
-            <div class="bg-black bg-opacity-70 bg-[url('/images/bgbanner.png')] bg-cover text-white rounded-3xl">
+            <div class="bg-black bg-opacity-70 bg-[url('/images/bgbanner.png')] bg-cover text-white rounded-3xl h-[550px] flex items-center justify-around mt-14">
                 
-                <h1 class="text-6xl font-bold">Welcome to the <span class="bg-gradient-to-r from-[#797DFC] to-[#000000BF] text-transparent bg-clip-text">ReTro</span> Forum</h1>
-                <p class="text-lg font-medium">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
-                <div class="flex border-2 rounded-full w-fit">
-                    <form>
-                        <input type="text" name="" placeholder="Search here anything" id="" class="rounded-l-full h-12 pl-6 px-8">
-                    </form>
-                    <button class="btn w-24 rounded-full bg-[#9DCFEA] text-white text-base font-medium">Search</button>
+                <div class=" flex flex-col justify-center space-y-8 h-[550px]">
+                    <h1 class="text-6xl font-bold">Welcome to the <br>
+                        <span class="bg-gradient-to-r from-[#797DFC] to-[#000000BF] text-transparent bg-clip-text">ReTro</span> Forum
+                    </h1>
+    
+                    <p class="text-lg font-medium">
+                        Share your favorite opinion and win and wp <br> forum coffee mug!
+                    </p>
+    
+                    <div class="flex border-2 rounded-full w-fit bg-white">
+                        <form>
+                            <input type="text" name="" placeholder="Search here anything" id="" class="rounded-l-full h-12 pl-6 px-8">
+                        </form>
+                        <button class="btn w-24 rounded-full bg-[#9DCFEA] text-white text-base font-medium">Search</button>
+                    </div>
+                </div>
+                <div class="text-black border-2 h-fit bg-white p-10 rounded-2xl">
+                    <table class="text-xl">
+                        <tr>
+                            <td class="pr-8">Registered Users</td>
+                            <td>01</td>
+                        </tr>
+                        <tr>
+                            <td class="pr-8">Forum</td>
+                            <td>05</td>
+                        </tr>
+                        <tr>
+                            <td class="pr-8">Topics</td>
+                            <td>01</td>
+                        </tr>
+                        <tr>
+                            <td class="pr-8">Replies</td>
+                            <td>01</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </nav>
     </header>
     <!-- Main Section -->
-    <main class="w-[80%] mx-auto">
+    <main class="w-[80%] mx-auto mt-20">
+        <section>
+            <div class="text-center">
+                <h1 class="text-4xl font-bold">Let's Discuss</h1>
+                <p class="text-lg inter mt-8">Yes, you can run unit tests and view the results directly within the app. The <br> 
+                    integrated testing features allow for a streamlined .</p>
+            </div>
 
+            <div>
+                <div class="border-2 bg-[#F3F3F5] w-[42rem] flex">
+                    <div>
+                        <img src="images/joinforum.png" alt="" class="w-20 h-20">
+                    </div>
+
+                    <div>
+                        <p><span># Music</span> <span>Author : Awlad Hossain</span></p>
+                        <h5>10 Kids Unaware of Their Halloween Costume</h5>
+                        <p>It's one thing to subject yourself to ha Halloween costume mishap because, <br>
+                            hey that's your prerogative</p>
+
+                        <hr>
+
+                        <div class="flex justify-between">
+                            <div class="flex gap-6">
+                                <ul class="flex space-x-3">
+                                    <li><img src="images/Comments.svg" alt="Comments"></li>
+                                    <li>560</li>
+                                </ul>
+                                <ul class="flex space-x-3">
+                                    <li><img src="images/Views.svg" alt="Comments"></li>
+                                    <li>1,568</li>
+                                </ul>
+                                <ul class="flex space-x-3">
+                                    <li><img src="images/Duration.svg" alt="Comments"></li>
+                                    <li>5 mins</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <img src="images/Message.svg" alt="Message">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer Section -->

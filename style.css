@@ -10,7 +10,7 @@
 }
 
 
-.navberIcons > ul > li:hover {
+.navberIcons > ul > li:hover{
   cursor: pointer;
   position: relative;
   background-color: rgb(245, 100, 48);
@@ -22,3 +22,9 @@
   top: 10px;
   /* display: flex; */
 }  
+
+.hr-foot{
+  height: 2px;
+  background-color: #0000;
+  border: none;
+}

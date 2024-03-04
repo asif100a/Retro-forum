@@ -249,7 +249,7 @@ const showCommentOfCard2 = async() => {
             // console.log(element2)
             const div = document.createElement('div');
             div.innerHTML = `
-            <div class="border-2 rounded-3xl w-80 p-6 space-y-6">
+            <div class="border-2 rounded-3xl h-[30rem] w-80 p-6 space-y-6">
             <img src="${element2.cover_image}" alt="" class="h-40 rounded-xl mx-auto">
             <div>
                 <p class="flex gap-3">

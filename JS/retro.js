@@ -54,15 +54,15 @@ flagImg.addEventListener('mouseout', () => {
 const spinnerOfCard1 = document.getElementById('spinner1');
    
 
-const showProductionOfCard1 = async () => {
-    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+const showProductionOfCard1 = async (search) => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts`);
     const data = await res.json();
     const dataPosts = data.posts;
     // console.log(dataPosts);
 
     displayData(dataPosts);
-    // showViewData(dataPosts);
     // setActivet(dataPosts);
+    searchBtn(dataPosts);
 };
 
 const displayData = (dataAll) => {
@@ -70,26 +70,24 @@ const displayData = (dataAll) => {
     const cardsContainer = document.getElementById('cards-container');
     
     
-    // showViewData();
     
     // const position = document.getElementById('position');
     // // position.style.add('bg-red-500')
     // console.log(position)
     const timeOut1 = setTimeout(() => {
         
-        dataAll.map(element => {
-            // console.log(element);
-            // const selectActivate = document.querySelector('#position');
-            // const nodes = selectActivate;
-            // console.log(nodes)
+       
 
-            // const get = element;
-            // if(get.isActive === true) {
-            //     const position = document.getElementById('position')
+        dataAll.map(element => {
+
                 
-            //     console.log(position.classList)
-            // }
-            
+                if(element.isActive) {
+                    const span = document.createElement('span');
+                    const setup = span.style.backgroundColor = 'green';
+                }
+                else{
+                    console.log('do')
+                }
             
             spinnerOfCard1.classList.add('hidden');
     
@@ -98,7 +96,7 @@ const displayData = (dataAll) => {
         <div class="border-2 bg-[#F3F3F5] w-auto lg:w-[48rem] flex flex-col lg:flex-row gap-6 py-10 px-8 rounded-3xl">
         <div class="relative h-fit w-fit p-4">
             <img src="${element.image}" alt="" class="w-24 h-20 rounded-xl">
-            <p id="position" class="w-3 h-3 position rounded-full absolute top-3 right-3"></p>
+            <p id="isActive" class="w-3 h-3 rounded-full absolute top-3 right-3"></p>
         </div>
     
         <div>
@@ -133,25 +131,27 @@ const displayData = (dataAll) => {
         `;
     
             cardsContainer.appendChild(divForCard1);
-    
+
+
+            
             // showViewData(element)
             // const position = document.getElementById('position')
             // position.classList.add('bg-red-500');
 
-            const selectActivate = document.querySelectorAll('#position');
-            const nodes = selectActivate;
-            nodes[0].classList.add('bg-red-500')
-            // nodes.classList.add('bg-green-500')
+        //     const selectActivate = document.querySelectorAll('#position');
+        //     const nodes = selectActivate;
+        //     nodes[0].classList.add('bg-red-500')
+        //     // nodes.classList.add('bg-green-500')
 
-            if(element.isActive) {
-                // console.log('True')
-            }
-            else{
-                // console.log('False')
-            }
+        //     if(element.isActive) {
+        //         // console.log('True')
+        //     }
+        //     else{
+        //         // console.log('False')
+        //     }
 
-            const selectActivate2 = document.getElementById('position');
-            return selectActivate2
+        //     const selectActivate2 = document.getElementById('position');
+        //     return selectActivate2
         });
         
         // setActivet();
@@ -160,6 +160,16 @@ const displayData = (dataAll) => {
     }, 2000);
     
     
+};
+
+
+const searchBtn = (data) => {
+    const searchInput = document.getElementById('search-input');
+    const searchText = searchInput.value;
+    data.forEach((d) => {
+        console.log(d.category)
+    })
+    // showProductionOfCard1(search)
 };
 
 

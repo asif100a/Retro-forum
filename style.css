@@ -35,7 +35,7 @@
 
 
 .home, .edit, .add, .flag{
-  background-color: #00000033;
+  background-color: #00ff0033;
   width: fit-content;
   height: fit-content;
   border-radius: 8px;

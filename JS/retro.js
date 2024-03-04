@@ -1,10 +1,58 @@
 // const showTooltip = document.getElementById('tooltip');
 // console.log(showTooltip);
 
+// Home
+const homeImg = document.getElementById('home-img');
+const home = document.getElementById('home');
+homeImg.addEventListener('mouseover', () => {
+    home.classList.remove('hidden');
+
+});
+homeImg.addEventListener('mouseout', () => {
+    home.classList.add('hidden');
+});
+
+// Edit
+const editImg = document.getElementById('edit-img');
+const edit = document.getElementById('edit');
+editImg.addEventListener('mouseover', () => {
+    edit.classList.remove('hidden');
+
+});
+editImg.addEventListener('mouseout', () => {
+    edit.classList.add('hidden');
+});
+
+// Add
+const addImg = document.getElementById('add-img');
+const add = document.getElementById('add');
+addImg.addEventListener('mouseover', () => {
+    add.classList.remove('hidden');
+
+});
+addImg.addEventListener('mouseout', () => {
+    add.classList.add('hidden');
+});
+
+// Flag
+const flagImg = document.getElementById('flag-img');
+const flag = document.getElementById('flag');
+flagImg.addEventListener('mouseover', () => {
+    flag.classList.remove('hidden');
+
+});
+flagImg.addEventListener('mouseout', () => {
+    flag.classList.add('hidden');
+});
+
+
+// 
+
+// 
 
 //
 const spinnerOfCard1 = document.getElementById('spinner1');
-    // spinnerOfCard1.classList.remove('hidden');
+   
 
 const showProductionOfCard1 = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
@@ -14,6 +62,7 @@ const showProductionOfCard1 = async () => {
 
     displayData(dataPosts);
     // showViewData(dataPosts);
+    // setActivet(dataPosts);
 };
 
 const displayData = (dataAll) => {
@@ -22,12 +71,25 @@ const displayData = (dataAll) => {
     
     
     // showViewData();
-    const position = document.getElementById('position');
+    
+    // const position = document.getElementById('position');
+    // // position.style.add('bg-red-500')
     // console.log(position)
-
     const timeOut1 = setTimeout(() => {
-        dataAll.forEach(element => {
+        
+        dataAll.map(element => {
             // console.log(element);
+            // const selectActivate = document.querySelector('#position');
+            // const nodes = selectActivate;
+            // console.log(nodes)
+
+            // const get = element;
+            // if(get.isActive === true) {
+            //     const position = document.getElementById('position')
+                
+            //     console.log(position.classList)
+            // }
+            
             
             spinnerOfCard1.classList.add('hidden');
     
@@ -36,7 +98,7 @@ const displayData = (dataAll) => {
         <div class="border-2 bg-[#F3F3F5] w-auto lg:w-[48rem] flex flex-col lg:flex-row gap-6 py-10 px-8 rounded-3xl">
         <div class="relative h-fit w-fit p-4">
             <img src="${element.image}" alt="" class="w-24 h-20 rounded-xl">
-            <p id="position" class="w-3 h-3 bg-red-500 rounded-full absolute top-3 right-3"></p>
+            <p id="position" class="w-3 h-3 position rounded-full absolute top-3 right-3"></p>
         </div>
     
         <div>
@@ -63,7 +125,7 @@ const displayData = (dataAll) => {
                     </ul>
                 </div>
                 <div>
-                    <img onclick="showViewData('title')" src="images/Message.svg" alt="Message" class="hover:cursor-pointer">
+                    <img id="clicked" onclick="showViewData(event)" src="images/Message.svg" alt="Message" class="hover:cursor-pointer">
                 </div>
             </div>
         </div>
@@ -72,38 +134,88 @@ const displayData = (dataAll) => {
     
             cardsContainer.appendChild(divForCard1);
     
-            showViewData(element)
-        });
-    }, 2000);
+            // showViewData(element)
+            // const position = document.getElementById('position')
+            // position.classList.add('bg-red-500');
 
+            const selectActivate = document.querySelectorAll('#position');
+            const nodes = selectActivate;
+            nodes[0].classList.add('bg-red-500')
+            // nodes.classList.add('bg-green-500')
+
+            if(element.isActive) {
+                // console.log('True')
+            }
+            else{
+                // console.log('False')
+            }
+
+            const selectActivate2 = document.getElementById('position');
+            return selectActivate2
+        });
+        
+        // setActivet();
+        
+        
+    }, 2000);
+    
     
 };
 
 
+// const setActivet = (element) => {
+
+    // const position = document.getElementById('position');
+    //     console.log(position)
+        
+//         // element.forEach(activate => {
+//         //     console.log(activate.isActive)
+
+//         //     if(activate.isActive === true){
+//         //         position.classList.add('bg-green-500');
+//         //     }
+//         //     else{
+//         //         position.classList.add('bg-red-500')
+//         //     }
+//         // });
+
+
+// };
+
+
+let sum = 0;
 const showViewData = (element) => {
-    // console.log(element)
-    const titleElement = document.getElementById('title');
-    const title = titleElement.innerText;
-    // element.forEach(e => {
-    //     console.log(e)
-    // });
+    
+    const cardDataAll = element.target.parentNode.parentNode.parentNode.childNodes;
+    const cardTitle = cardDataAll[3].innerText;
+    const cardViews = cardDataAll[9].childNodes[1].childNodes[3].childNodes[3].innerText;
+
+    const countView = document.getElementById('count-view');
+    
+    
     const showView = document.getElementById('Views-content');
     // console.log(showView);
+    const clicked = document.getElementById('clicked');
+    // console.log(clicked)
 
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="bg-white w-fit flex items-center p-4 rounded-2xl mt-8">
-        <p class="font-semibold w-auto lg:w-64">${title}</p>
+        <p class="font-semibold w-auto lg:w-64">${cardTitle}</p>
         <p class="flex flex-col lg:flex-row gap-1 lg:gap-3">
             <span><img src="images/Views.svg" alt="Views"></span>
-            <span>1,568</span>
+            <span>${cardViews}</span>
         </p>
     </div>
     `;
-    showView.appendChild(div);
+    if(clicked) {
+        showView.appendChild(div);
+        sum++;
+        countView.innerText = sum;
+    }
 };
 
-// showViewData();
+
 showProductionOfCard1();
 
 
@@ -115,7 +227,7 @@ const showCommentOfCard2 = async() => {
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
     const data = await res.json();
     const comments = data[0];
-    console.log(comments);
+    // console.log(comments);
 
     const commentCardContainer = document.getElementById('comment-card-container');
     

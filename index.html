@@ -36,16 +36,19 @@
                     <a class="btn btn-ghost text-3xl font-bold">ReTro</a>
                 </div>
                 <div class="flex space-x-6">
-                    <div class="hidden lg:flex navberIcons">
-                        <ul id="tooltip" class="hidden lg:flex menu-horizontal px-1 space-x-4">
-                            <li><a><img src="images/Home icon.svg" alt=""></a></li>
-                            <!-- <li id="home">Home</li> -->
-                            <li><a><img src="images/Pencil icon.svg" alt=""></a></li>
-                            <!-- <li id="edit">Edit</li> -->
-                            <li><a><img src="images/Contact icon.svg" alt=""></a></li>
-                            <!-- <li id="add">Add</li> -->
-                            <li><a><img src="images/Flag icon.svg" alt=""></a></li>
-                            <!-- <li id="flag">Home</li> -->
+                    <div id="ul-container" class="hidden lg:flex navberIcons">
+                        <ul id="ul" class="hidden lg:flex menu-horizontal px-1 space-x-4">
+                            <li id="home-img"><a><img src="images/Home icon.svg" alt=""></a></li>
+                            <li id="home" class="home hidden">Home</li>
+
+                            <li id="edit-img"><a><img src="images/Pencil icon.svg" alt=""></a></li>
+                            <li id="edit" class="edit hidden">Edit</li>
+
+                            <li id="add-img"><a><img src="images/Contact icon.svg" alt=""></a></li>
+                            <li id="add" class="add hidden">Add</li>
+
+                            <li id="flag-img"><a><img src="images/Flag icon.svg" alt=""></a></li>
+                            <li id="flag" class="flag hidden">Report</li>
                         </ul>
                     </div>
                     <div class="">
@@ -129,17 +132,11 @@
                         <h1 class="text-xl font-bold">Title</h1>
                         <p class="flex gap-3">
                             <span><img src="images/Tick mark.svg" alt="Tick mark"></span>
-                            <span>Mark as read (<span id="">0</span>)</span>
+                            <span>Mark as read (<span id="count-view">0</span>)</span>
                         </p>
                     </div>
                     <div id="Views-content">
-                        <div class="bg-white w-fit flex items-center p-4 rounded-2xl mt-8">
-                            <p class="font-semibold w-auto lg:w-64">10 Kids Unaware of Their Halloween Costume</p>
-                            <p class="flex flex-col lg:flex-row gap-1 lg:gap-3">
-                                <span><img src="images/Views.svg" alt="Views"></span>
-                                <span>1,568</span>
-                            </p>
-                        </div>
+                        
                     </div>
                 </div>
 

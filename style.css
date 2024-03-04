@@ -28,3 +28,33 @@
   background-color: #0000;
   border: none;
 }
+
+#ul-container{
+  position: relative;
+}
+
+
+.home, .edit, .add, .flag{
+  background-color: #00000033;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 8px;
+  padding: 3px;
+  transition: 2s;
+  position: absolute;
+  top: -35px;
+  left: -8px;
+}
+.edit{
+  left: 72px;
+}
+.add{
+  left: 142px;
+}
+.flag{
+  left: 205px;
+}
+
+/* .home-img:hover .home{
+  visibility: visible;
+} */
